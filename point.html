@@ -1,0 +1,1792 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#16001f">
+  <meta name="description" content="Point do Açaí - Açaí, cremes, acompanhamentos, barca, roleta e vitamina de açaí. Peça pelo WhatsApp!">
+
+  <title>Point do Açaí | Cardápio Oficial</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #09000f;
+      --bg2: #16001f;
+      --purple: #5b087d;
+      --purple2: #8c0fae;
+      --pink: #df087b;
+      --pink2: #ff1493;
+      --gold: #ffc400;
+      --gold2: #ff9d00;
+      --white: #fff;
+      --text: #fff;
+      --muted: #d8c9df;
+      --green: #25d366;
+      --card: rgba(50, 4, 67, .88);
+      --border: rgba(255, 20, 147, .55);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    html {
+      background: var(--bg);
+    }
+
+    body {
+      font-family: "Poppins", sans-serif;
+      background:
+        radial-gradient(circle at 10% 10%, rgba(140,15,174,.22), transparent 25%),
+        radial-gradient(circle at 90% 50%, rgba(223,8,123,.14), transparent 25%),
+        var(--bg);
+      color: var(--white);
+      overflow-x: hidden;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* ===================== HEADER ===================== */
+
+    header {
+      position: fixed;
+      z-index: 1000;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 76px;
+      padding: 0 6%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: .35s;
+    }
+
+    header.scrolled {
+      background: rgba(9,0,15,.92);
+      backdrop-filter: blur(18px);
+      box-shadow: 0 10px 40px rgba(0,0,0,.35);
+      border-bottom: 1px solid rgba(255,196,0,.15);
+    }
+
+    .logo {
+      font-family: "Bebas Neue", sans-serif;
+      font-size: 2.15rem;
+      letter-spacing: 2px;
+      line-height: 1;
+    }
+
+    .logo span {
+      color: var(--gold);
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+    }
+
+    nav a {
+      font-size: .83rem;
+      font-weight: 600;
+      color: #fff;
+      transition: .25s;
+    }
+
+    nav a:hover {
+      color: var(--gold);
+    }
+
+    .nav-order {
+      background: linear-gradient(135deg, var(--gold), var(--gold2));
+      color: #16001f !important;
+      padding: 11px 20px;
+      border-radius: 50px;
+      font-weight: 900 !important;
+      box-shadow: 0 8px 25px rgba(255,196,0,.2);
+    }
+
+    .menu-toggle {
+      display: none;
+      font-size: 1.8rem;
+      cursor: pointer;
+    }
+
+    /* ===================== HERO ===================== */
+
+    .hero {
+      min-height: 100vh;
+      padding: 130px 7% 80px;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 80% 45%, rgba(255,20,147,.22), transparent 28%),
+        radial-gradient(circle at 20% 30%, rgba(140,15,174,.2), transparent 30%),
+        linear-gradient(135deg, #09000f, #23002f 55%, #100016);
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      width: 650px;
+      height: 650px;
+      right: -220px;
+      top: -160px;
+      border: 1px solid rgba(255,196,0,.12);
+      border-radius: 50%;
+      box-shadow:
+        0 0 0 70px rgba(255,196,0,.015),
+        0 0 0 140px rgba(255,196,0,.012);
+    }
+
+    .hero::after {
+      content: "AÇAÍ";
+      position: absolute;
+      right: -80px;
+      bottom: -100px;
+      font-family: "Bebas Neue";
+      font-size: 22rem;
+      color: rgba(255,255,255,.018);
+      transform: rotate(-8deg);
+    }
+
+    .hero-content {
+      width: 58%;
+      position: relative;
+      z-index: 3;
+    }
+
+    .premium {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      background: linear-gradient(135deg, var(--gold), #ff9c00);
+      color: #19001e;
+      padding: 8px 15px;
+      border-radius: 50px;
+      font-size: .72rem;
+      font-weight: 900;
+      letter-spacing: .5px;
+      margin-bottom: 22px;
+      box-shadow: 0 8px 25px rgba(255,196,0,.2);
+    }
+
+    .hero h1 {
+      font-family: "Bebas Neue", sans-serif;
+      font-size: clamp(5rem, 10vw, 9.5rem);
+      line-height: .78;
+      letter-spacing: 2px;
+      margin-bottom: 25px;
+    }
+
+    .hero h1 span {
+      color: var(--gold);
+      display: block;
+      font-family: "Poppins", sans-serif;
+      font-style: italic;
+      font-weight: 800;
+      font-size: .72em;
+      line-height: 1;
+      text-shadow: 0 5px 30px rgba(255,196,0,.15);
+    }
+
+    .hero-description {
+      max-width: 600px;
+      color: var(--muted);
+      font-size: 1rem;
+      line-height: 1.8;
+      margin-bottom: 30px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 13px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      gap: 9px;
+      padding: 15px 24px;
+      border-radius: 50px;
+      font-weight: 800;
+      font-size: .86rem;
+      transition: .3s;
+      border: 0;
+      cursor: pointer;
+    }
+
+    .btn-gold {
+      color: #18001e;
+      background: linear-gradient(135deg, var(--gold), var(--gold2));
+      box-shadow: 0 12px 35px rgba(255,196,0,.22);
+    }
+
+    .btn-gold:hover {
+      transform: translateY(-4px) scale(1.02);
+      box-shadow: 0 17px 45px rgba(255,196,0,.32);
+    }
+
+    .btn-outline {
+      border: 1px solid rgba(255,255,255,.25);
+      background: rgba(255,255,255,.04);
+      color: #fff;
+    }
+
+    .btn-outline:hover {
+      border-color: var(--gold);
+      color: var(--gold);
+    }
+
+    /* HERO AÇAÍ */
+
+    .hero-art {
+      position: absolute;
+      z-index: 2;
+      right: 5%;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 450px;
+      height: 450px;
+    }
+
+    .art-glow {
+      position: absolute;
+      width: 330px;
+      height: 330px;
+      left: 60px;
+      top: 70px;
+      background: #d300ff;
+      opacity: .22;
+      filter: blur(90px);
+      border-radius: 50%;
+    }
+
+    .bowl {
+      position: absolute;
+      width: 320px;
+      height: 215px;
+      left: 70px;
+      top: 135px;
+      border-radius: 18px 18px 90px 90px;
+      background: linear-gradient(150deg,#8e13a9,#270034);
+      transform: rotate(-5deg);
+      box-shadow:
+        inset 0 -25px 35px rgba(0,0,0,.5),
+        0 35px 60px rgba(0,0,0,.55);
+    }
+
+    .bowl::before {
+      content: "";
+      position: absolute;
+      width: 330px;
+      height: 90px;
+      left: -5px;
+      top: -28px;
+      border-radius: 50%;
+      background:
+        radial-gradient(circle at 15% 50%, #ff4f9b 0 7%, transparent 8%),
+        radial-gradient(circle at 30% 35%, #ffd03e 0 7%, transparent 8%),
+        radial-gradient(circle at 45% 58%, #fff1c4 0 7%, transparent 8%),
+        radial-gradient(circle at 60% 35%, #ff7b4f 0 7%, transparent 8%),
+        radial-gradient(circle at 78% 52%, #ffd03e 0 7%, transparent 8%),
+        radial-gradient(circle at 88% 32%, #fff 0 6%, transparent 7%),
+        linear-gradient(145deg,#9c22b8,#57106f);
+      box-shadow: inset 0 -12px 18px rgba(0,0,0,.35);
+    }
+
+    .fruit {
+      position: absolute;
+      border-radius: 50%;
+      z-index: 4;
+      box-shadow: inset -6px -8px 10px rgba(0,0,0,.18), 0 12px 25px rgba(0,0,0,.25);
+      animation: floating 4s ease-in-out infinite;
+    }
+
+    .fruit1 {
+      width: 60px;
+      height: 60px;
+      background: #e91e63;
+      left: 35px;
+      top: 95px;
+    }
+
+    .fruit2 {
+      width: 52px;
+      height: 52px;
+      background: #ffc400;
+      right: 50px;
+      top: 80px;
+      animation-delay: .8s;
+    }
+
+    .fruit3 {
+      width: 45px;
+      height: 45px;
+      background: #ff7658;
+      left: 130px;
+      top: 50px;
+      animation-delay: 1.2s;
+    }
+
+    .fruit4 {
+      width: 38px;
+      height: 38px;
+      background: #ffb4d5;
+      right: 130px;
+      top: 35px;
+      animation-delay: 1.7s;
+    }
+
+    @keyframes floating {
+      0%,100% { transform: translateY(0) rotate(0); }
+      50% { transform: translateY(-13px) rotate(5deg); }
+    }
+
+    .hero-tag {
+      position: absolute;
+      z-index: 6;
+      background: rgba(255,255,255,.96);
+      color: #26002f;
+      padding: 13px 17px;
+      border-radius: 14px;
+      font-size: .72rem;
+      font-weight: 700;
+      box-shadow: 0 15px 35px rgba(0,0,0,.3);
+      animation: floating 4s ease-in-out infinite;
+    }
+
+    .hero-tag strong {
+      display: block;
+      color: var(--purple2);
+      font-size: 1rem;
+    }
+
+    .tag1 {
+      right: 0;
+      top: 70px;
+    }
+
+    .tag2 {
+      left: 0;
+      bottom: 65px;
+      animation-delay: 1s;
+    }
+
+    /* ===================== FAIXA ===================== */
+
+    .ticker {
+      background: linear-gradient(90deg,var(--gold),#ff9d00,var(--gold));
+      color: #16001f;
+      overflow: hidden;
+      padding: 13px 0;
+      white-space: nowrap;
+      font-family: "Bebas Neue", sans-serif;
+      letter-spacing: 1.5px;
+      font-size: 1.3rem;
+    }
+
+    .ticker-track {
+      display: inline-block;
+      animation: ticker 18s linear infinite;
+    }
+
+    @keyframes ticker {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+
+    /* ===================== SEÇÕES ===================== */
+
+    section {
+      padding: 90px 7%;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .section-header small {
+      color: var(--gold);
+      font-size: .7rem;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-weight: 800;
+    }
+
+    .section-header h2 {
+      font-family: "Bebas Neue", sans-serif;
+      font-size: clamp(3.2rem, 6vw, 5.5rem);
+      line-height: .9;
+      margin-top: 8px;
+    }
+
+    .section-header p {
+      max-width: 650px;
+      margin: 15px auto 0;
+      color: var(--muted);
+      line-height: 1.7;
+      font-size: .88rem;
+    }
+
+    /* ===================== TAMANHOS ===================== */
+
+    .sizes-section {
+      background: linear-gradient(180deg,#100016,#17001f);
+    }
+
+    .sizes {
+      max-width: 1200px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(4,1fr);
+      gap: 18px;
+    }
+
+    .size-card {
+      position: relative;
+      padding: 30px 20px;
+      text-align: center;
+      border-radius: 25px;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 50% 0%,rgba(255,20,147,.4),transparent 55%),
+        linear-gradient(145deg,#4b075e,#1b0026);
+      border: 1px solid var(--border);
+      box-shadow: 0 20px 45px rgba(0,0,0,.25);
+      transition: .35s;
+    }
+
+    .size-card:hover {
+      transform: translateY(-9px);
+      border-color: var(--gold);
+      box-shadow: 0 25px 55px rgba(223,8,123,.2);
+    }
+
+    .size {
+      color: var(--gold);
+      font-weight: 900;
+      font-size: 1rem;
+      letter-spacing: .5px;
+    }
+
+    .cup-icon {
+      width: 95px;
+      height: 125px;
+      margin: 22px auto;
+      border-radius: 8px 8px 25px 25px;
+      position: relative;
+      background: linear-gradient(145deg,#78169b,#23002f);
+      border: 2px solid rgba(255,255,255,.12);
+      box-shadow: 0 20px 25px rgba(0,0,0,.3);
+    }
+
+    .cup-icon::before {
+      content: "";
+      position: absolute;
+      width: 99px;
+      height: 38px;
+      left: -4px;
+      top: -17px;
+      border-radius: 50%;
+      background: linear-gradient(145deg,#b63bd0,#671187);
+    }
+
+    .cup-icon::after {
+      content: "✦";
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%,-50%);
+      font-size: 2rem;
+      color: white;
+    }
+
+    .price {
+      display: inline-block;
+      padding: 7px 20px;
+      border-radius: 50px;
+      background: white;
+      color: #100015;
+      font-size: 1.25rem;
+      font-weight: 900;
+    }
+
+    /* ===================== ACOMPANHAMENTOS ===================== */
+
+    .acomp-section {
+      background:
+        radial-gradient(circle at 15% 30%,rgba(223,8,123,.12),transparent 25%),
+        #0b0010;
+    }
+
+    .acomp-box {
+      max-width: 1150px;
+      margin: auto;
+      padding: 40px;
+      border-radius: 30px;
+      background: linear-gradient(145deg,#31043f,#16001f);
+      border: 1px solid rgba(255,20,147,.4);
+      box-shadow: 0 25px 70px rgba(0,0,0,.35);
+    }
+
+    .acomp-title {
+      text-align: center;
+      color: white;
+      font-family: "Bebas Neue", sans-serif;
+      font-size: 3.2rem;
+      margin-bottom: 30px;
+    }
+
+    .acomp-title span {
+      color: var(--gold);
+    }
+
+    .acomp-grid {
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      gap: 30px;
+    }
+
+    .acomp-column {
+      border-right: 1px solid rgba(255,196,0,.5);
+      padding-right: 25px;
+    }
+
+    .acomp-column:last-child {
+      border: 0;
+    }
+
+    .acomp-column ul {
+      list-style: none;
+    }
+
+    .acomp-column li {
+      color: #fff;
+      margin: 10px 0;
+      font-size: .9rem;
+      font-weight: 500;
+    }
+
+    .acomp-column li::before {
+      content: "•";
+      color: var(--gold);
+      font-size: 1.3rem;
+      margin-right: 9px;
+    }
+
+    .toppings {
+      background: linear-gradient(145deg,#570a68,#27002f);
+      padding: 20px;
+      border-radius: 18px;
+      border: 1px solid rgba(255,196,0,.45);
+    }
+
+    .toppings-title {
+      display: inline-block;
+      background: var(--gold);
+      color: #16001f;
+      padding: 4px 12px;
+      border-radius: 30px;
+      font-weight: 900;
+      margin-bottom: 10px;
+    }
+
+    .limit {
+      margin-top: 25px;
+      padding: 12px;
+      text-align: center;
+      background: white;
+      color: #420052;
+      border-radius: 50px;
+      font-weight: 900;
+      font-size: .82rem;
+    }
+
+    /* ===================== DUAS COLUNAS ===================== */
+
+    .menu-detail {
+      background: #fff;
+      color: #21002c;
+    }
+
+    .detail-grid {
+      max-width: 1200px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: 1fr 1.25fr;
+      gap: 25px;
+    }
+
+    .detail-card {
+      border-radius: 30px;
+      padding: 35px;
+      background: linear-gradient(145deg,#430054,#18001f);
+      color: white;
+      border: 1px solid rgba(255,20,147,.45);
+      box-shadow: 0 20px 55px rgba(0,0,0,.2);
+    }
+
+    .detail-card h3 {
+      font-family: "Bebas Neue", sans-serif;
+      color: var(--gold);
+      font-size: 2.8rem;
+      margin-bottom: 20px;
+      line-height: 1;
+    }
+
+    .additional-list {
+      list-style: none;
+    }
+
+    .additional-list li {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 15px;
+      border-bottom: 1px dotted rgba(255,255,255,.22);
+      padding: 8px 0;
+      font-size: .82rem;
+    }
+
+    .additional-list li span:last-child {
+      color: var(--gold);
+      font-weight: 900;
+      white-space: nowrap;
+    }
+
+    .cream-grid {
+      columns: 2;
+      list-style: none;
+    }
+
+    .cream-grid li {
+      padding: 6px 0;
+      font-size: .8rem;
+      break-inside: avoid;
+    }
+
+    .cream-grid li::before {
+      content: "●";
+      color: var(--gold);
+      margin-right: 8px;
+    }
+
+    .cream-note {
+      margin-top: 20px;
+      padding: 12px;
+      border-radius: 50px;
+      text-align: center;
+      background: white;
+      color: #3b0048;
+      font-weight: 800;
+      font-size: .75rem;
+    }
+
+    /* ===================== ESPECIAIS ===================== */
+
+    .specials {
+      background: #0b0010;
+    }
+
+    .special-grid {
+      max-width: 1200px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      gap: 20px;
+    }
+
+    .special-card {
+      min-height: 300px;
+      border-radius: 28px;
+      padding: 30px;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      background:
+        radial-gradient(circle at 80% 15%,rgba(255,196,0,.3),transparent 20%),
+        linear-gradient(145deg,#6a087e,#22002e);
+      border: 1px solid rgba(255,20,147,.45);
+      transition: .35s;
+    }
+
+    .special-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 25px 60px rgba(223,8,123,.18);
+    }
+
+    .special-card::before {
+      content: "🍓";
+      position: absolute;
+      right: 20px;
+      top: 20px;
+      font-size: 6rem;
+      opacity: .75;
+      transform: rotate(-10deg);
+    }
+
+    .special-card:nth-child(2)::before {
+      content: "🍇";
+    }
+
+    .special-card:nth-child(3)::before {
+      content: "🍫";
+    }
+
+    .special-card small {
+      color: var(--gold);
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .special-card h3 {
+      font-family: "Bebas Neue", sans-serif;
+      font-size: 2.8rem;
+      line-height: .9;
+      margin: 10px 0;
+    }
+
+    .special-card p {
+      color: #ddcce3;
+      font-size: .78rem;
+      line-height: 1.6;
+      max-width: 270px;
+      margin-bottom: 18px;
+    }
+
+    .special-price {
+      display: inline-block;
+      width: fit-content;
+      background: white;
+      color: #16001f;
+      padding: 7px 18px;
+      border-radius: 50px;
+      font-weight: 900;
+      font-size: 1.2rem;
+    }
+
+    /* ===================== CTA ===================== */
+
+    .cta {
+      padding: 100px 7%;
+      text-align: center;
+      background:
+        radial-gradient(circle at 50% 100%,rgba(255,196,0,.15),transparent 35%),
+        linear-gradient(135deg,#4c0563,#14001b);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta::before {
+      content: "";
+      position: absolute;
+      width: 500px;
+      height: 500px;
+      border: 1px solid rgba(255,196,0,.1);
+      border-radius: 50%;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%,-50%);
+    }
+
+    .cta-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .cta small {
+      color: var(--gold);
+      font-weight: 900;
+      letter-spacing: 3px;
+    }
+
+    .cta h2 {
+      font-family: "Bebas Neue", sans-serif;
+      font-size: clamp(4rem, 8vw, 7rem);
+      line-height: .85;
+      margin: 15px 0;
+    }
+
+    .cta p {
+      color: var(--muted);
+      max-width: 600px;
+      margin: 0 auto 25px;
+      line-height: 1.7;
+    }
+
+    /* ===================== FOOTER ===================== */
+
+    footer {
+      background: #050007;
+      padding: 55px 7% 25px;
+      border-top: 1px solid rgba(255,196,0,.12);
+    }
+
+    .footer-grid {
+      max-width: 1150px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 45px;
+      padding-bottom: 40px;
+      border-bottom: 1px solid rgba(255,255,255,.08);
+    }
+
+    .footer-logo {
+      font-family: "Bebas Neue", sans-serif;
+      font-size: 2.7rem;
+    }
+
+    .footer-logo span {
+      color: var(--gold);
+    }
+
+    .footer-description {
+      color: #8e7d95;
+      font-size: .8rem;
+      line-height: 1.8;
+      max-width: 420px;
+      margin-top: 12px;
+    }
+
+    footer h4 {
+      color: var(--gold);
+      margin-bottom: 16px;
+      font-size: .85rem;
+    }
+
+    footer ul {
+      list-style: none;
+    }
+
+    footer li {
+      color: #9f91a5;
+      font-size: .78rem;
+      margin-bottom: 11px;
+    }
+
+    footer li a:hover {
+      color: var(--gold);
+    }
+
+    .footer-bottom {
+      max-width: 1150px;
+      margin: 20px auto 0;
+      display: flex;
+      justify-content: space-between;
+      color: #625766;
+      font-size: .68rem;
+    }
+
+    /* ===================== WHATSAPP ===================== */
+
+    .whatsapp {
+      position: fixed;
+      z-index: 9999;
+      right: 22px;
+      bottom: 22px;
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background: var(--green);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.8rem;
+      box-shadow: 0 12px 35px rgba(37,211,102,.4);
+      animation: pulse 2s infinite;
+      transition: .25s;
+    }
+
+    .whatsapp:hover {
+      transform: scale(1.1);
+    }
+
+    .whatsapp-text {
+      position: absolute;
+      right: 76px;
+      white-space: nowrap;
+      background: white;
+      color: #18001f;
+      padding: 9px 14px;
+      border-radius: 10px;
+      font-size: .72rem;
+      font-weight: 800;
+      box-shadow: 0 8px 25px rgba(0,0,0,.2);
+      opacity: 0;
+      pointer-events: none;
+      transform: translateX(8px);
+      transition: .3s;
+    }
+
+    .whatsapp:hover .whatsapp-text {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    @keyframes pulse {
+      0% {
+        box-shadow: 0 0 0 0 rgba(37,211,102,.55), 0 12px 35px rgba(37,211,102,.3);
+      }
+      70% {
+        box-shadow: 0 0 0 17px rgba(37,211,102,0), 0 12px 35px rgba(37,211,102,.3);
+      }
+      100% {
+        box-shadow: 0 0 0 0 rgba(37,211,102,0), 0 12px 35px rgba(37,211,102,.3);
+      }
+    }
+
+    /* ===================== MOBILE ===================== */
+
+    @media (max-width: 950px) {
+
+      .hero-content {
+        width: 100%;
+        text-align: center;
+      }
+
+      .hero-description {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .hero-buttons {
+        justify-content: center;
+      }
+
+      .hero-art {
+        position: relative;
+        right: auto;
+        top: auto;
+        transform: scale(.85);
+        margin: 20px auto -30px;
+      }
+
+      .hero {
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .sizes {
+        grid-template-columns: repeat(2,1fr);
+      }
+
+      .acomp-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .acomp-column {
+        border-right: 0;
+        border-bottom: 1px solid rgba(255,196,0,.4);
+        padding: 0 0 20px;
+      }
+
+      .detail-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .special-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 700px) {
+
+      header {
+        height: 68px;
+        padding: 0 5%;
+      }
+
+      .logo {
+        font-size: 1.8rem;
+      }
+
+      nav {
+        display: none;
+        position: absolute;
+        top: 78px;
+        left: 5%;
+        right: 5%;
+        padding: 25px;
+        border-radius: 20px;
+        background: rgba(22,0,31,.98);
+        backdrop-filter: blur(20px);
+        flex-direction: column;
+        align-items: stretch;
+        text-align: center;
+        border: 1px solid rgba(255,20,147,.3);
+      }
+
+      nav.active {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .hero {
+        padding: 115px 5% 60px;
+      }
+
+      .hero h1 {
+        font-size: 5rem;
+      }
+
+      .hero-description {
+        font-size: .82rem;
+      }
+
+      .hero-art {
+        width: 350px;
+        height: 340px;
+        transform: scale(.72);
+        margin-left: -20px;
+        margin-right: -20px;
+      }
+
+      section {
+        padding: 70px 5%;
+      }
+
+      .sizes {
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+      }
+
+      .size-card {
+        padding: 23px 10px;
+      }
+
+      .acomp-box {
+        padding: 25px 18px;
+      }
+
+      .acomp-title {
+        font-size: 2.5rem;
+      }
+
+      .detail-card {
+        padding: 25px 20px;
+      }
+
+      .cream-grid {
+        columns: 1;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      .whatsapp {
+        width: 58px;
+        height: 58px;
+        right: 16px;
+        bottom: 16px;
+      }
+
+      .whatsapp-text {
+        display: none;
+      }
+    }
+
+    @media (max-width: 400px) {
+      .sizes {
+        grid-template-columns: 1fr;
+      }
+
+      .hero h1 {
+        font-size: 4.5rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ===================== HEADER ===================== -->
+
+  <header id="header">
+
+    <a href="#inicio" class="logo">
+      POINT <span>do Açaí</span>
+    </a>
+
+    <nav id="nav">
+      <a href="#inicio">Início</a>
+      <a href="#tamanhos">Tamanhos</a>
+      <a href="#acompanhamentos">Acompanhamentos</a>
+      <a href="#cardapio">Cardápio</a>
+      <a href="#especiais">Especiais</a>
+
+      <a
+        class="nav-order"
+        href="https://wa.me/5581993816081?text=Olá!%20Vim%20pelo%20site%20do%20Point%20do%20Açaí%20e%20quero%20fazer%20um%20pedido!%20🍇"
+        target="_blank">
+        PEDIR AGORA
+      </a>
+    </nav>
+
+    <div class="menu-toggle" id="menuToggle">☰</div>
+
+  </header>
+
+
+  <!-- ===================== HERO ===================== -->
+
+  <section class="hero" id="inicio">
+
+    <div class="hero-content">
+
+      <div class="premium">
+        ✦ 100% PREMIUM QUALITY ✦
+      </div>
+
+      <h1>
+        POINT
+        <span>do Açaí</span>
+      </h1>
+
+      <p class="hero-description">
+        O seu ponto favorito para matar aquela vontade de um açaí
+        bem cremoso, gelado e cheio de sabor. Escolha o tamanho,
+        monte sua combinação e aproveite!
+      </p>
+
+      <div class="hero-buttons">
+
+        <a
+          class="btn btn-gold"
+          href="https://wa.me/5581993816081?text=Olá!%20Vim%20pelo%20site%20do%20Point%20do%20Açaí%20🍇%20Quero%20fazer%20meu%20pedido!"
+          target="_blank">
+          💬 PEDIR PELO WHATSAPP
+        </a>
+
+        <a class="btn btn-outline" href="#tamanhos">
+          VER CARDÁPIO ↓
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <!-- ARTE DECORATIVA -->
+
+    <div class="hero-art">
+
+      <div class="art-glow"></div>
+
+      <div class="hero-tag tag1">
+        ⭐ MAIS PEDIDO
+        <strong>Super Cremoso</strong>
+      </div>
+
+      <div class="hero-tag tag2">
+        🍓 MONTE DO SEU JEITO
+        <strong>Acompanhamentos sem limites</strong>
+      </div>
+
+      <div class="fruit fruit1"></div>
+      <div class="fruit fruit2"></div>
+      <div class="fruit fruit3"></div>
+      <div class="fruit fruit4"></div>
+
+      <div class="bowl"></div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ===================== TICKER ===================== -->
+
+  <div class="ticker">
+    <div class="ticker-track">
+      AÇAÍ • CREMOSIDADE • SABOR • FRUTAS • COMPLEMENTOS • POINT DO AÇAÍ •
+      AÇAÍ • CREMOSIDADE • SABOR • FRUTAS • COMPLEMENTOS • POINT DO AÇAÍ •
+    </div>
+  </div>
+
+
+  <!-- ===================== TAMANHOS ===================== -->
+
+  <section class="sizes-section" id="tamanhos">
+
+    <div class="section-header">
+      <small>Escolha o tamanho</small>
+      <h2>QUAL VAI SER O SEU?</h2>
+      <p>
+        Do pequeno para matar a vontade ao gigante para quem não brinca em serviço.
+      </p>
+    </div>
+
+    <div class="sizes">
+
+      <div class="size-card">
+
+        <div class="size">P — 250 ML</div>
+
+        <div class="cup-icon"></div>
+
+        <div class="price">R$ 10,00</div>
+
+      </div>
+
+
+      <div class="size-card">
+
+        <div class="size">M — 350 ML</div>
+
+        <div class="cup-icon"></div>
+
+        <div class="price">R$ 12,00</div>
+
+      </div>
+
+
+      <div class="size-card">
+
+        <div class="size">G — 500 ML</div>
+
+        <div class="cup-icon"></div>
+
+        <div class="price">R$ 18,00</div>
+
+      </div>
+
+
+      <div class="size-card">
+
+        <div class="size">GG — 750 ML</div>
+
+        <div class="cup-icon"></div>
+
+        <div class="price">R$ 24,00</div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ===================== ACOMPANHAMENTOS ===================== -->
+
+  <section class="acomp-section" id="acompanhamentos">
+
+    <div class="section-header">
+      <small>Você escolhe</small>
+      <h2>ACOMPANHAMENTOS</h2>
+      <p>
+        Combine seus favoritos e deixe o seu açaí com a sua cara.
+      </p>
+    </div>
+
+    <div class="acomp-box">
+
+      <h3 class="acomp-title">
+        ACOMPANHAMENTOS <span>SEM LIMITES!</span>
+      </h3>
+
+      <div class="acomp-grid">
+
+        <div class="acomp-column">
+          <ul>
+            <li>Banana</li>
+            <li>Granola</li>
+            <li>Leite em pó</li>
+            <li>Farinha láctea</li>
+          </ul>
+        </div>
+
+        <div class="acomp-column">
+          <ul>
+            <li>Neston</li>
+            <li>Ovomaltine</li>
+            <li>M&amp;M</li>
+            <li>Paçoca</li>
+          </ul>
+        </div>
+
+        <div class="acomp-column">
+
+          <ul>
+            <li>Cereal</li>
+            <li>Uva passa</li>
+            <li>Amendoim</li>
+            <li>Leite condensado</li>
+          </ul>
+
+          <div class="toppings">
+
+            <div class="toppings-title">
+              COBERTURAS
+            </div>
+
+            <ul>
+              <li>Chocolate</li>
+              <li>Morango</li>
+              <li>Mel</li>
+            </ul>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="limit">
+        ✦ ACOMPANHAMENTOS É SEM LIMITES! ✦
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ===================== ADICIONAIS + CREMES ===================== -->
+
+  <section class="menu-detail" id="cardapio">
+
+    <div class="section-header">
+      <small>Monte sua combinação</small>
+      <h2>ADICIONAIS &amp; CREMES</h2>
+      <p>
+        Deixe seu açaí ainda mais completo com os adicionais e cremes disponíveis.
+      </p>
+    </div>
+
+
+    <div class="detail-grid">
+
+
+      <!-- ADICIONAIS -->
+
+      <div class="detail-card">
+
+        <h3>ADICIONAIS</h3>
+
+        <ul class="additional-list">
+
+          <li>
+            <span>🍓 Morango</span>
+            <span>R$ 4,00</span>
+          </li>
+
+          <li>
+            <span>🥝 Kiwi</span>
+            <span>R$ 4,00</span>
+          </li>
+
+          <li>
+            <span>🍫 Nutella</span>
+            <span>R$ 4,00</span>
+          </li>
+
+          <li>
+            <span>🍫 KitKat</span>
+            <span>R$ 4,00</span>
+          </li>
+
+          <li>
+            <span>🍪 Oreo</span>
+            <span>R$ 3,00</span>
+          </li>
+
+          <li>
+            <span>🍫 Bis</span>
+            <span>R$ 4,00</span>
+          </li>
+
+          <li>
+            <span>🍫 Gotas de chocolate</span>
+            <span>R$ 3,00</span>
+          </li>
+
+          <li>
+            <span>🍫 Sonho de Valsa</span>
+            <span>R$ 4,00</span>
+          </li>
+
+        </ul>
+
+      </div>
+
+
+      <!-- AÇAÍ E CREMES -->
+
+      <div class="detail-card">
+
+        <h3>AÇAÍ / CREMES</h3>
+
+        <ul class="cream-grid">
+
+          <li>Açaí tradicional</li>
+          <li>Brigadeiro de colher</li>
+          <li>Delícia de abacaxi</li>
+          <li>Ninho com Nutella</li>
+          <li>Ninho com Oreo</li>
+          <li>Sonho de Valsa</li>
+          <li>Ovomaltine</li>
+          <li>Kinder Ovo</li>
+          <li>Morango</li>
+          <li>Cupuaçu</li>
+          <li>Black</li>
+          <li>Ninho</li>
+          <li>Paçoca</li>
+          <li>Tapioca</li>
+          <li>Chocomenta</li>
+          <li>Brownie</li>
+          <li>Iogurte Grego</li>
+
+        </ul>
+
+        <div class="cream-note">
+          ATÉ 2 OPÇÕES!<br>
+          <small>
+            Açaí + 1 creme ou 2 cremes (sem açaí)
+          </small>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ===================== ESPECIAIS ===================== -->
+
+  <section class="specials" id="especiais">
+
+    <div class="section-header">
+      <small>Para quem quer ir além</small>
+      <h2>ESPECIAIS DO POINT</h2>
+      <p>
+        Opções diferentes para compartilhar ou transformar seu momento em uma experiência.
+      </p>
+    </div>
+
+
+    <div class="special-grid">
+
+
+      <!-- VITAMINA -->
+
+      <div class="special-card">
+
+        <small>Energia e sabor</small>
+
+        <h3>VITAMINA<br>DE AÇAÍ</h3>
+
+        <p>
+          Feita com açaí selecionado para mais sabor e energia.
+        </p>
+
+        <div class="special-price">
+          R$ 17,00
+        </div>
+
+      </div>
+
+
+      <!-- BARCA -->
+
+      <div class="special-card">
+
+        <small>Para compartilhar</small>
+
+        <h3>BARCA<br>G AÇAÍ</h3>
+
+        <p>
+          Uma barca caprichada que acompanha 2 adicionais.
+        </p>
+
+        <div class="special-price">
+          R$ 40,00
+        </div>
+
+      </div>
+
+
+      <!-- ROLETA -->
+
+      <div class="special-card">
+
+        <small>Diversão em cada colherada</small>
+
+        <h3>ROLETA<br>G AÇAÍ</h3>
+
+        <p>
+          Nossa roleta especial acompanha 2 adicionais.
+        </p>
+
+        <div class="special-price">
+          R$ 35,00
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ===================== CTA ===================== -->
+
+  <section class="cta">
+
+    <div class="cta-content">
+
+      <small>DEU VONTADE? ENTÃO VEM!</small>
+
+      <h2>
+        PEÇA SEU<br>
+        AÇAÍ AGORA
+      </h2>
+
+      <p>
+        Chame o Point do Açaí no WhatsApp, escolha seu tamanho,
+        seus cremes e seus acompanhamentos favoritos.
+      </p>
+
+      <a
+        class="btn btn-gold"
+        href="https://wa.me/5581993816081?text=Olá!%20Vim%20pelo%20site%20do%20Point%20do%20Açaí%20🍇%20Quero%20fazer%20um%20pedido!"
+        target="_blank">
+        💬 FAZER PEDIDO NO WHATSAPP
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- ===================== FOOTER ===================== -->
+
+  <footer>
+
+    <div class="footer-grid">
+
+      <div>
+
+        <div class="footer-logo">
+          POINT <span>do Açaí</span>
+        </div>
+
+        <p class="footer-description">
+          Seu ponto favorito para açaí, cremes, frutas,
+          acompanhamentos e combinações irresistíveis.
+        </p>
+
+      </div>
+
+
+      <div>
+
+        <h4>NAVEGAÇÃO</h4>
+
+        <ul>
+          <li><a href="#inicio">Início</a></li>
+          <li><a href="#tamanhos">Tamanhos</a></li>
+          <li><a href="#acompanhamentos">Acompanhamentos</a></li>
+          <li><a href="#cardapio">Cardápio</a></li>
+          <li><a href="#especiais">Especiais</a></li>
+        </ul>
+
+      </div>
+
+
+      <div>
+
+        <h4>FALE CONOSCO</h4>
+
+        <ul>
+          <li>
+            📱
+            <a
+              href="https://wa.me/5581993816081"
+              target="_blank">
+              (81) 9 9381-6081
+            </a>
+          </li>
+
+          <li>
+            📸
+            <a
+              href="https://www.instagram.com/pointdoacai47/"
+              target="_blank">
+              @POINTDOACAI47
+            </a>
+          </li>
+
+          <li>
+            📍 Rua Johnh Kennedy Nº 521
+          </li>
+        </ul>
+
+      </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+      <span>
+        © 2026 Point do Açaí. Todos os direitos reservados.
+      </span>
+
+      <span>
+        Feito com 💜 para quem ama açaí.
+      </span>
+
+    </div>
+
+  </footer>
+
+
+  <!-- ===================== WHATSAPP FLUTUANTE ===================== -->
+
+  <a
+    class="whatsapp"
+    href="https://wa.me/5581993816081?text=Olá!%20Vim%20pelo%20site%20do%20Point%20do%20Açaí%20🍇%20Quero%20fazer%20meu%20pedido!"
+    target="_blank"
+    aria-label="Pedir pelo WhatsApp">
+
+    <span class="whatsapp-text">
+      Pedir pelo WhatsApp
+    </span>
+
+    💬
+
+  </a>
+
+
+  <!-- ===================== JAVASCRIPT ===================== -->
+
+  <script>
+
+    /* HEADER */
+
+    const header = document.getElementById("header");
+
+    window.addEventListener("scroll", () => {
+
+      if (window.scrollY > 40) {
+        header.classList.add("scrolled");
+      } else {
+        header.classList.remove("scrolled");
+      }
+
+    });
+
+
+    /* MENU MOBILE */
+
+    const menuToggle = document.getElementById("menuToggle");
+    const nav = document.getElementById("nav");
+
+    menuToggle.addEventListener("click", () => {
+
+      nav.classList.toggle("active");
+
+      menuToggle.textContent =
+        nav.classList.contains("active")
+          ? "✕"
+          : "☰";
+
+    });
+
+
+    /* FECHAR MENU */
+
+    document.querySelectorAll("#nav a").forEach(link => {
+
+      link.addEventListener("click", () => {
+
+        nav.classList.remove("active");
+        menuToggle.textContent = "☰";
+
+      });
+
+    });
+
+
+    /* ANIMAÇÕES AO ENTRAR NA TELA */
+
+    const observer = new IntersectionObserver(
+      entries => {
+
+        entries.forEach(entry => {
+
+          if (entry.isIntersecting) {
+
+            entry.target.classList.add("visible");
+
+          }
+
+        });
+
+      },
+      {
+        threshold: .12
+      }
+    );
+
+
+    document.querySelectorAll(
+      ".size-card, .detail-card, .special-card, .acomp-box"
+    ).forEach(element => {
+
+      element.style.opacity = "0";
+      element.style.transform = "translateY(25px)";
+      element.style.transition =
+        "opacity .7s ease, transform .7s ease";
+
+      observer.observe(element);
+
+    });
+
+
+    const animationStyle = document.createElement("style");
+
+    animationStyle.innerHTML = `
+      .visible {
+        opacity: 1 !important;
+        transform: translateY(0) !important;
+      }
+    `;
+
+    document.head.appendChild(animationStyle);
+
+  </script>
+
+</body>
+</html>
